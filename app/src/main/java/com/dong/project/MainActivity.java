@@ -26,35 +26,36 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        /*
         else if (amountView.getText().equals(0)) {
             return;
         }
+         */
 
         Context context = getActivity();
         SharedPreferences sharedPref = context.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         // check pass
-        int pass = getResources().getInteger(R.integer.pass);
+        String pass = getResources().getString(R.string.passcode);
         System.out.println("current pass:" + pass);
 
         // immediately change it
         SharedPreferences.Editor editor = sharedPref.edit();
         System.out.println("input pass:" + String.valueOf(amountView.getText()));
-        editor.putInt(, Integer.parseInt(String.valueOf(amountView.getText())));
+        editor.putInt(getResources().getString(R.string.passcode), Integer.parseInt(String.valueOf(amountView.getText())));
         editor.apply();
-        if (pass == 0) {
-
-            editor.clear();
-            editor.apply();
-
-
-            System.out.println("pass created");
+        if (pass.equals(Integer.parseInt(String.valueOf(amountView.getText())))) {
+            System.out.println("pass match");
+            switchBrowse();
         }
 
-        if (Integer.parseInt(String.valueOf(amountView.getText())) == pass) {
-
+        else {
+            switchFake();
         }
-        // switchBrowse();
+
+    }
+
+    private void switchFake() {
 
     }
 

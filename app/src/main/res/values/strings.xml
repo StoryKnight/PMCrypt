@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="preference_file_key">69</string>
-    <string name="passcode"></string>
+    <string name="passcode">0</string>
 </resources>
