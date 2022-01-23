@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -15,33 +14,13 @@
             android:id="@+id/email"
             android:layout_width="fill_parent"
             android:layout_height="79dp"
-            android:text="REAL ACCOUNTS"
+            android:text="ACCOUNTS"
             android:textAlignment="center"
             android:textColor="#050404"
-            android:textSize="34sp"
+            android:textSize="48sp"
             android:textStyle="bold"
             android:typeface="normal" />
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passTextField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onButtonShowPopupWindowClick"
-                android:text="newPass" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="setPassText"
-            app:srcCompat="@android:drawable/ic_menu_add" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -67,14 +46,13 @@
                 android:text="PASSWORD" />
         </LinearLayout>
         <TextView
-            android:id="@+id/realAccounts"
+            android:id="@+id/fakeAccounts"
             android:layout_width="410dp"
             android:layout_height="569dp"
             android:text="INFORMATION"
             android:textAlignment="center"
             tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="118dp" />
-
     </LinearLayout>
 
 

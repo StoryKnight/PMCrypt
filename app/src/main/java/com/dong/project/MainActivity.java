@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("input pass:" + String.valueOf(amountView.getText()));
         editor.putInt(getResources().getString(R.string.passcode), Integer.parseInt(String.valueOf(amountView.getText())));
         editor.apply();
-        if (pass.equals(Integer.parseInt(String.valueOf(amountView.getText())))) {
+        if (pass.equals(String.valueOf(amountView.getText()))) {
             System.out.println("pass match");
             switchBrowse();
         }
@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void switchFake() {
-
+        Intent switchActivityIntent = new Intent(this, FakeActivity.class);
+        startActivity(switchActivityIntent);
     }
 
     private void switchBrowse() {
@@ -66,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void reset() {
         Context context = getActivity();
-
     }
 
     private Context getActivity() {

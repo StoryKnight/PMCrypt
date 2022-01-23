@@ -21,6 +21,9 @@
         <activity
             android:name=".BrowseActivity" >
         </activity>
+        <activity
+            android:name=".FakeActivity" >
+        </activity>
     </application>
 
 </manifest>
