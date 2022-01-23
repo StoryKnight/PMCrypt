@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -35,13 +36,35 @@ public class MainActivity extends AppCompatActivity {
         // check pass
         int pass = getResources().getInteger(R.integer.pass);
         System.out.println("current pass:" + pass);
+
+        // immediately change it
+        SharedPreferences.Editor editor = sharedPref.edit();
+        System.out.println("input pass:" + String.valueOf(amountView.getText()));
+        editor.putInt(, Integer.parseInt(String.valueOf(amountView.getText())));
+        editor.apply();
         if (pass == 0) {
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putInt(getString(R.integer.pass), Integer.parseInt(String.valueOf(amountView.getText())));
+
+            editor.clear();
             editor.apply();
+
+
             System.out.println("pass created");
         }
 
+        if (Integer.parseInt(String.valueOf(amountView.getText())) == pass) {
+
+        }
+        // switchBrowse();
+
+    }
+
+    private void switchBrowse() {
+        Intent switchActivityIntent = new Intent(this, BrowseActivity.class);
+        startActivity(switchActivityIntent);
+    }
+
+    private void reset() {
+        Context context = getActivity();
 
     }
 

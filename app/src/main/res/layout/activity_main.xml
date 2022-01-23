@@ -15,28 +15,29 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
             android:text="PMCrypt"
+            android:textAlignment="center"
             android:textSize="60sp" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="164dp"
+            android:layout_width="match_parent"
             android:layout_height="178dp"
             app:srcCompat="@android:drawable/ic_lock_lock" />
 
         <EditText
             android:id="@+id/editTextNumberPassword"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberPassword" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="login"
             android:text="Submit"
